@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    border: 0%;
+    padding: 0%;
+    font-family: Inter, "Open Sans", "Noto Sans", "Roboto", "Droid Sans", sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    transition: 0.3s;
+}
+
+.featured{
+    border-radius: 0.5rem;
+    color: inherit;
+    display: block;
+    font-size: 0;
+    opacity: 1;
+    text-decoration: none;
+    width: 100%;
+    padding: 1rem;
+    /* etiquetas */
+    header{
+        display: inline-block;
+        font-size: 1rem;
+        padding-left: 1em;
+        vertical-align: middle;
+        
+    }
+    
+    /* clases internas*/
+    .featured-image {
+        background-color: #555761;
+        background-origin: border-box;
+        background-position: 50%;
+        background-size: cover;
+        border-radius: 0.25rem;
+        border: 1px solid black;
+        display: inline-block;
+        height: 200px;
+        width: 100%;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        position: relative;
+        vertical-align: middle;
+    }
+    header{
+        .byline{
+            transition: 250ms ease;
+
+            display: inline-flex;
+            .avatar img{
+                border-radius: 50%;
+                border: 1px solid black;
+                display: inline-block;
+                height: 2rem;
+                margin-right: 0.5rem;
+                vertical-align: middle;
+                width: 2rem;
+            }
+            .info {
+                .author{
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+    /* convierte .featured en contenedor para que las consultas respondan al ancho del contenedor */
+    container-type: inline-size;
+    @container (min-width: 600px) {
+        display: inline-flex;
+        header{
+            width: 50%;
+        }
+        .featured-image{
+            width: 50%;
+            margin-bottom: 0;
+        }
+    }
+    @container (min-width: 800px) {
+        header{
+            width: 33.33%;
+        }
+        .featured-image{
+            height: 320px;
+            width: calc(66.66% - 0.66rem);
+        }
+    }
+}
+.featured:hover{
+    background-color: #333333;
+    *{
+        background-color: #333333;
+    }
+}
+
+.spacer{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    >*{
+        @media (min-width: 800px) {
+        flex: 1 1 0%;        
+        }
+    }
+}
+
+
+
+
