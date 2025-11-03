@@ -1,0 +1,854 @@
+
+*{
+    box-sizing: border-box;
+    border: 0; 
+    padding: 0;
+    font-family: Inter, "Open Sans", "Noto Sans", "Roboto", "Droid Sans", sans-serif;
+    transition: 0.3s;
+}
+
+
+body {
+    background-color: #ffffff;
+    color: #010101;
+    margin: 0;
+}
+
+
+.header {
+    display: flex;         
+    align-items: center;  
+    width: 100%;         
+    padding: 15px 30px;    
+}
+
+
+.logo {
+ 
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Elementary_logo.svg/1200px-Elementary_logo.svg.png");
+
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.navegacion {
+
+    margin-left: 24px;
+    margin-right: auto; 
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: #010101;
+    font-weight: 500;
+    padding: 0 12px; 
+    font-size: 16px;
+}
+
+.navegacion a:hover {
+    color: #555555; 
+}
+
+
+.redes {
+    display: flex; 
+    gap: 20px;    
+}
+
+.redes a {
+    text-decoration: none;
+    font-size: 22px; 
+    color: #888888; /* Color base de los iconos */
+}
+
+
+.redes a:hover {
+    color: #3689e6; 
+}
+
+.redes a.youtube:hover {
+    color: #FF0000; 
+}
+
+.redes a.Discord:hover {
+    color: #5865F2;
+}
+.main{
+    border: transparent;
+}
+.LogoLetras {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOTo3lLYwqqKhCMeNfz-Y5u3jiw5cxtzhTlKTY7vnQ-nAVKCJEA-4PexrGTWmVYvhy5Q&usqp=CAU");
+
+    width: 550px;
+    height: 80px;
+
+  
+    background-size: contain;
+    
+    background-repeat: no-repeat;
+    background-position: center; 
+    
+    display: block;
+    margin: 0 auto;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 1.5em; 
+    max-width: 900px; 
+    margin: 0 auto; 
+
+
+    font-weight: normal; 
+}
+
+.computadora {
+    
+    position: relative;
+    
+    max-width: 1200px; 
+    margin: 40px auto 0 auto; 
+}
+
+.laptop {
+
+    width: 100%;
+    height: auto; 
+    display: block; 
+}
+
+
+.ventana {
+    
+    position: absolute;
+    width: 75%;       /* La hacemos más pequeña que la laptop */
+    top: 2%;          /* La bajamos un poco */
+    left: 12.5%;        /* La movemos a la derecha */
+}
+
+.pagar-section {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente los items */
+    gap: 30px; /* Espacio entre el grupo de botones y el de comprar */
+    margin-top: 50px; /* Espacio arriba */
+    padding: 20px;
+    flex-wrap: wrap; /* Permite que se pongan uno abajo del otro en pantallas chicas */
+}
+
+.controles-pago {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Por si no caben en una línea */
+}
+
+.controles-pago span {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.opciones-pago {
+    display: flex;
+}
+
+/* Estilo para los botones de precio ($10, $20, $30) */
+.btn-precio {
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+    padding: 10px 18px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-left: -1px; /* Efecto de borde superpuesto */
+}
+
+.btn-precio:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-left: 0;
+}
+
+/* Estilo para el botón seleccionado */
+.btn-precio.active,
+.btn-precio:hover {
+    background-color: #f0f0f0;
+    border-color: #aaa;
+    position: relative; /* Para que se ponga encima del siguiente */
+}
+
+/* Estilo para el input personalizado */
+.input-personalizado {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px 12px;
+    margin-left: -1px;
+    background-color: #fcfcfc;
+}
+
+.input-personalizado:hover,
+.input-personalizado:focus-within {
+    border-color: #aaa;
+    position: relative;
+    z-index: 2;
+}
+
+.input-personalizado .dollar {
+    font-size: 1.1em;
+    color: #888;
+    margin-right: 5px;
+}
+
+.input-personalizado input[type="number"] {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 90px; /* Ancho del campo de texto */
+    font-size: 1.1em;
+}
+
+.input-personalizado input::-webkit-outer-spin-button,
+.input-personalizado input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.input-personalizado input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.btn-comprar {
+    position: relative;
+    left: 70px;
+    background-color: #3689e6;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-comprar:hover {
+    background-color: #2a72c4; 
+}
+
+
+.info-compra {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.info-compra .links-compra {
+    margin-top: 5px;
+}
+
+.info-compra a {
+    color: #3689e6; 
+    text-decoration: none;
+}
+
+.info-compra a:hover {
+    text-decoration: underline;
+}
+
+
+/*Seccion Que hay  de nuevo*/
+.quehaydenuevo {
+    background-color: #fafafa; 
+   
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+
+    
+    padding: 60px 20px; 
+}
+
+
+.logoIMG img {
+     position: relative;
+    width: 180px;  
+    height: 140px;
+    margin-bottom: 20px; 
+}
+
+.quehaydenuevo h1 {
+    font-size: 2.2em; 
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #000000;
+    
+    text-align: center;
+    max-width: 750px; 
+
+    margin: 0 auto 30px auto; 
+}
+
+.anuncio-link {
+    text-decoration: none;
+    color: #3689e6; 
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.anuncio-link:hover {
+    text-decoration: underline;
+}
+
+/* === SECCIÓN 3: BLOG POSTS === */
+
+
+.blog-posts {
+    padding: 20px 20px;
+    background-color:#fafafa; 
+}
+
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px; /* Espacio entre las tarjetas */
+    
+    max-width: 1700px;
+    
+    margin: 0 auto;
+}
+
+
+@media (min-width:400px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .blog-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+.blog-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden; 
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card a {
+    text-decoration: none;
+    color: #000;
+}
+
+.card-image {
+    width: 100%;
+    height: 160px;
+    
+    object-fit: cover; 
+    display: block;
+}
+
+.card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+}
+
+.card-content h3 {
+    font-size: 1.25em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.card-content h3:hover {
+    color: #3689e6; 
+}
+
+.card-subtitle {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+    flex-grow: 1; 
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 2px;                                
+}
+
+.author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%; /* La hace redonda */
+}
+
+.author-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-weight: bold;
+    color: #000;
+    font-size: 0.9em;
+}
+
+.post-meta {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* === SECCIÓN 4: APP CENTER === */
+.appcenter-section {
+    display: flex;
+    flex-wrap: wrap; 
+    margin: 0;
+
+    border-radius: 0;
+    
+    /* === CAMBIO 1: FONDO EN TODA LA SECCIÓN === */
+    background: #4F188D;
+    background: linear-gradient(90deg, rgba(79, 24, 141, 1) 0%, rgba(119, 56, 171, 1) 50%, rgba(170, 98, 213, 1) 100%);
+    color: #ffffff;
+
+    overflow: hidden; 
+}
+
+/* --- Columna Izquierda (Promo) --- */
+.appcenter-promo {
+
+    flex-basis: 50%;
+    flex-grow: 1;
+    min-width: 320px;
+    padding: 60px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    /* === CAMBIO 5: TEXTO A LA IZQUIERDA === */
+    align-items: flex-start; 
+    text-align: left;
+}
+
+
+.promo-icon-wrapper {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.promo-icon {
+    width: 128px;
+    height: 128px;
+}
+
+.appcenter-promo h2 {
+    font-size: 2.2em;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.appcenter-promo p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.promo-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea botones a la izquierda */
+    gap: 15px;
+}
+
+.btn-promo {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.btn-promo-primary {
+    background-color: #ffffff;
+    color: #4F188D;
+    padding: 12px 24px;
+}
+.btn-promo-primary:hover {
+    transform: scale(1.03);
+}
+
+.btn-promo-secondary {
+    color: #ffffff;
+    padding: 5px 0;
+    opacity: 0.9;
+}
+.btn-promo-secondary:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* --- Columna Derecha (Imagen) --- */
+.appcenter-image {
+    flex-basis: 50%;
+    flex-grow: 1;
+    min-width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.appcenter-image img {
+    width: 890px;  
+    max-width: none; 
+    margin-left: auto;
+    height: auto;
+    display: block;
+}
+
+/* === SECCIÓN 5: PRODUCTIVIDAD === */
+
+.productividad {
+    background-color: #fafafa;
+    padding: 60px 20px; 
+    text-align: center; 
+}
+
+.productividad h2 {
+    font-size: 2.5em; /* Tamaño del título */
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.section-descripcion {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+    max-width: 800px; /* Limita el ancho del párrafo */
+    margin: 0 auto 50px auto; /* Centra el párrafo y le da espacio abajo */
+}
+
+/* --- La Cuadrícula de 3 Columnas --- */
+.features-grid {
+    display: grid;
+    /* 1 columna en móvil */
+    grid-template-columns: 1fr;
+    gap: 30px; /* Espacio entre las tarjetas */
+    
+    /* Centramos la cuadrícula */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* A partir de 768px (tablets), pasamos a 3 columnas */
+@media (min-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* --- Cada item de la cuadrícula --- */
+.feature-item {
+    /* Anulamos el centrado del padre, alineamos a la izquierda */
+    text-align: left;
+}
+
+.feature-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px; /* Bordes redondeados */
+    /* Sombra sutil como en la imagen */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espacio entre imagen y subtítulo */
+}
+
+.feature-item h3 {
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* === SECCIÓN 6: APPS INCLUIDAS === */
+
+
+.apps-section {
+    position: relative; /* Necesario para posicionar el overlay y el fondo */
+    height: 600px; /* Altura fija para la sección, ajusta si es necesario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff; /* Color del texto blanco */
+    padding: 60px 20px;
+    overflow: hidden; /* Para que la imagen de fondo no se desborde */
+}
+
+/* Imagen de fondo */
+.apps-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://blog.elementary.io/images/updates-for-august-2025/desktop-blur.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2; 
+}
+
+
+.apps-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+    z-index: -1; 
+}
+
+.apps-section .content-wrapper {
+    position: relative; 
+    z-index: 1; 
+    max-width: 1100px; 
+    margin: 0 auto;
+}
+
+.apps-section h2 {
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.apps-section .section-description {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    opacity: 0.9;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    gap: 30px; 
+    justify-items: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .apps-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.app-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.app-item img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.app-item span {
+    display: block; 
+}
+
+.app-item:hover {
+    transform: translateY(-5px); 
+    opacity: 0.9;
+}
+
+/* === SECCIÓN 7: CONTROLES PARENTALES === */
+
+.controles-parentales {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center; 
+    max-width: 1200px; 
+    margin: 60px auto; 
+    padding: 20px;
+    gap: 40px; 
+    background-color: #ffffff; 
+}
+
+.controles-parentales .columna-texto {
+    flex-basis: 45%; 
+    flex-grow: 1;
+    min-width: 300px;
+    color: #333; 
+}
+
+.control-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0; 
+}
+.titulo-con-icono {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    gap: 20px; /* Espacio entre icono y texto */
+    margin-bottom: 30px; 
+}
+
+.columna-texto h2 {
+    font-size: 2.2em;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 0; 
+}
+
+.columna-texto h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.columna-texto h3 i {
+    color: #555;
+    width: 20px; 
+}
+
+.columna-texto p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    padding-left: 30px; 
+}
+
+
+.controles-parentales .columna-imagen {
+    flex-basis: 50%; 
+    flex-grow: 1;
+    min-width: 550px;
+
+    overflow: hidden; 
+    border-radius: 8px; 
+}
+
+.columna-imagen img {
+    width: 110%;
+    height: auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); 
+    display: block; 
+}
+
+/* === SECCIÓN 8: PARTICIPE (NUEVA) === */
+
+.involucrarse-section {
+    /* Fondo gris claro, igual al de la sección 'quehaydenuevo' */
+    background-color: #fafafa; 
+    padding: 60px 20px;
+    text-align: center; /* Centra el bloque superior por defecto */
+}
+
+/* El bloque de texto superior */
+.info-principal {
+    max-width: 800px; /* Limita el ancho del texto superior */
+    margin: 0 auto 50px auto; /* Centra el bloque y le da espacio inferior */
+}
+
+.involucrarse-section h2 {
+    font-size: 2.2em;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.involucrarse-section .info-principal p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Contenedor para las dos columnas inferiores */
+.columnas-inferiores {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    gap: 40px; /* Espacio entre las columnas */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left; /* Alinea el texto de las columnas a la izquierda */
+}
+
+/* Cuando la pantalla sea más ancha (tablets y escritorio), pasa a 2 columnas */
+@media (min-width: 768px) {
+    .columnas-inferiores {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.columna-info h3 {
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.columna-info p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los enlaces (similar al de 'anuncio-link') */
+.info-link {
+    text-decoration: none;
+    color: #3689e6; 
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.info-link:hover {
+    text-decoration: underline;
+}
