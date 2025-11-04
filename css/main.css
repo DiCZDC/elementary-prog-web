@@ -1,4 +1,3 @@
-
 *{
     box-sizing: border-box;
     border: 0; 
@@ -17,8 +16,8 @@ body {
 
 .header {
     display: flex;         
-    align-items: center;  
-    width: 100%;         
+    align-items: center;   
+    width: 100%;           
     padding: 15px 30px;    
 }
 
@@ -86,7 +85,7 @@ body {
     width: 550px;
     height: 80px;
 
-  
+ 
     background-size: contain;
     
     background-repeat: no-repeat;
@@ -126,17 +125,17 @@ h1 {
 .ventana {
     
     position: absolute;
-    width: 75%;       /* La hacemos más pequeña que la laptop */
-    top: 2%;          /* La bajamos un poco */
-    left: 12.5%;        /* La movemos a la derecha */
+    width: 75%;      
+    top: 2%;         
+    left: 12.5%;
 }
 
 .pagar-section {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;     /* Centra verticalmente los items */
-    gap: 30px; /* Espacio entre el grupo de botones y el de comprar */
-    margin-top: 50px; /* Espacio arriba */
+    justify-content: center;
+    align-items: center;    
+    gap: 30px; 
+    margin-top: 50px; 
     padding: 20px;
     flex-wrap: wrap; /* Permite que se pongan uno abajo del otro en pantallas chicas */
 }
@@ -145,7 +144,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 15px;
-    flex-wrap: wrap; /* Por si no caben en una línea */
+    flex-wrap: wrap; 
 }
 
 .controles-pago span {
@@ -178,7 +177,7 @@ h1 {
 .btn-precio:hover {
     background-color: #f0f0f0;
     border-color: #aaa;
-    position: relative; /* Para que se ponga encima del siguiente */
+    position: relative; 
 }
 
 /* Estilo para el input personalizado */
@@ -265,7 +264,7 @@ h1 {
 /*Seccion Que hay  de nuevo*/
 .quehaydenuevo {
     background-color: #fafafa; 
-   
+    
     display: flex;
     flex-direction: column; 
     align-items: center;   
@@ -277,7 +276,7 @@ h1 {
 
 .logoIMG img {
      position: relative;
-    width: 180px;  
+    width: 180px;   
     height: 140px;
     margin-bottom: 20px; 
 }
@@ -320,21 +319,19 @@ h1 {
 
 .blog-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px; /* Espacio entre las tarjetas */
-    
+    grid-template-columns: 1fr; 
+    gap: 30px; 
     max-width: 1700px;
-    
     margin: 0 auto;
 }
 
-
-@media (min-width:400px) {
+@media (min-width: 600px) {
     .blog-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* 3. A 1024px (desktop) pasamos a 3 columnas */
 @media (min-width: 1024px) {
     .blog-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -393,7 +390,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-top: 2px;                                
+    margin-top: 2px;                          
 }
 
 .author-avatar {
@@ -524,7 +521,7 @@ h1 {
 }
 
 .appcenter-image img {
-    width: 890px;  
+    width: 890px;   
     max-width: none; 
     margin-left: auto;
     height: auto;
@@ -556,35 +553,29 @@ h1 {
 /* --- La Cuadrícula de 3 Columnas --- */
 .features-grid {
     display: grid;
-    /* 1 columna en móvil */
     grid-template-columns: 1fr;
-    gap: 30px; /* Espacio entre las tarjetas */
+    gap: 30px; 
     
     /* Centramos la cuadrícula */
     max-width: 1200px;
     margin: 0 auto;
 }
-
-/* A partir de 768px (tablets), pasamos a 3 columnas */
 @media (min-width: 768px) {
     .features-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* --- Cada item de la cuadrícula --- */
 .feature-item {
-    /* Anulamos el centrado del padre, alineamos a la izquierda */
     text-align: left;
 }
 
 .feature-item img {
     width: 100%;
     height: auto;
-    border-radius: 6px; /* Bordes redondeados */
-    /* Sombra sutil como en la imagen */
+    border-radius: 6px; 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Espacio entre imagen y subtítulo */
+    margin-bottom: 20px; 
 }
 
 .feature-item h3 {
@@ -603,13 +594,13 @@ h1 {
 
 
 .apps-section {
-    position: relative; /* Necesario para posicionar el overlay y el fondo */
-    height: 600px; /* Altura fija para la sección, ajusta si es necesario */
+    position: relative; 
+    height: 600px; 
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #ffffff; /* Color del texto blanco */
+    color: #ffffff; 
     padding: 60px 20px;
     overflow: hidden; /* Para que la imagen de fondo no se desborde */
 }
@@ -785,16 +776,16 @@ h1 {
 /* === SECCIÓN 8: PARTICIPE (NUEVA) === */
 
 .involucrarse-section {
-    /* Fondo gris claro, igual al de la sección 'quehaydenuevo' */
+
     background-color: #fafafa; 
     padding: 60px 20px;
-    text-align: center; /* Centra el bloque superior por defecto */
+    text-align: center; 
 }
 
 /* El bloque de texto superior */
 .info-principal {
-    max-width: 800px; /* Limita el ancho del texto superior */
-    margin: 0 auto 50px auto; /* Centra el bloque y le da espacio inferior */
+    max-width: 800px; 
+    margin: 0 auto 50px auto; 
 }
 
 .involucrarse-section h2 {
@@ -810,17 +801,16 @@ h1 {
     color: #333;
 }
 
-/* Contenedor para las dos columnas inferiores */
 .columnas-inferiores {
     display: grid;
-    grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    grid-template-columns: 1fr; 
     gap: 40px; /* Espacio entre las columnas */
     max-width: 1200px;
     margin: 0 auto;
-    text-align: left; /* Alinea el texto de las columnas a la izquierda */
+    text-align: center; 
 }
 
-/* Cuando la pantalla sea más ancha (tablets y escritorio), pasa a 2 columnas */
+
 @media (min-width: 768px) {
     .columnas-inferiores {
         grid-template-columns: 1fr 1fr;
@@ -841,7 +831,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Estilo para los enlaces (similar al de 'anuncio-link') */
 .info-link {
     text-decoration: none;
     color: #3689e6; 
@@ -851,4 +840,415 @@ h1 {
 
 .info-link:hover {
     text-decoration: underline;
+}
+
+#titulito {
+    font-size: 3.4em;   
+    font-weight: 700;   
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* === NUEVA SECCIÓN: ATAJOS DE TECLADO === */
+
+.atajos-teclado {
+    background-color: #ffffff; 
+    padding: 80px 40px; 
+    display: flex;
+    flex-wrap: wrap; /* Permite que las columnas se apilen en pantallas pequeñas */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 60px; /* Espacio entre la imagen y el texto */
+    max-width: 1400px; /* Ancho máximo para el contenido */
+    margin: 0 auto; /* Centra la sección en la página */
+}
+
+.atajos-imagen {
+    flex-basis: 50%; 
+    min-width: 400px; /* Ancho mínimo para la imagen antes de encogerse */
+    display: flex;
+    justify-content: center; 
+}
+
+.atajos-imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+}
+
+.atajos-contenido {
+    flex-basis: 40%; 
+    min-width: 350px;
+    text-align: left; 
+}
+
+.atajos-contenido h2 {
+    font-size: 2.8em; 
+    font-weight: 700; /* Negritas */
+    color: #5a5a5a; 
+    margin-bottom: 25px;
+    line-height: 1.2; /* Espaciado entre líneas del título */
+}
+
+.atajos-contenido p {
+    font-size: 1.15em; /* Tamaño de párrafo */
+    line-height: 1.7; /* Espaciado entre líneas del párrafo */
+    color: #333333; 
+}
+
+
+@media (max-width: 900px) {
+    .atajos-teclado {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .atajos-contenido {
+        min-width: unset; 
+        flex-basis: auto;
+        padding: 0 20px; 
+    }
+
+    .atajos-imagen {
+        min-width: unset;
+        flex-basis: auto;
+    }
+
+    .atajos-contenido h2 {
+        font-size: 2.2em;
+    }
+}
+
+/* === NUEVA SECCIÓN: PRIVACIDAD === */
+
+.privacidad-section {
+    background-color: #202a36; 
+    color: #ffffff; 
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.privacidad-header {
+    max-width: 900px; 
+    margin: 0 auto 60px auto; /* Centra y añade espacio inferior */
+}
+
+.privacidad-header h2 {
+    font-size: 2.8em; 
+    font-weight: 700; /* Negrita */
+    margin-bottom: 25px;
+    line-height: 1.2;
+    color: #ffffff; 
+}
+
+.privacidad-header p {
+    font-size: 1.15em;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    opacity: 0.9; 
+}
+
+.privacidad-header .privacy-link {
+    color: #3689e6; /* Color azul para el enlace */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.privacidad-header .privacy-link:hover {
+    text-decoration: underline;
+}
+
+.privacidad-features {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 40px; /* Espacio entre las tarjetas de características */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .privacidad-features {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+.feature-card {
+    text-align: left; /* Alinea el contenido de la tarjeta a la izquierda */
+    padding: 20px;
+}
+
+.feature-card i {
+    font-size: 1.3em; 
+    color: #515662;   
+    margin-right: 10px; /* Espacio entre el icono y el título */
+    display: inline-block; 
+    vertical-align: middle; 
+ 
+}
+
+.feature-card h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff;
+    display: inline-block; 
+    vertical-align: middle;
+}
+
+.feature-card p {
+    font-size: 1em;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+/* === SECCIÓN FINAL: DESCARGA Y PRENSA === */
+
+.descarga-final-section {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.descarga-header-final {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+.final-logo {
+    width: 128px; /* Tamaño del icono central */
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.descarga-header-final h2 {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.descarga-header-final p {
+    font-size: 1.15em;
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 40px;
+}
+
+.btn-descargar-final {
+    display: inline-block; /* Para que el botón tenga padding y márgenes */
+    background-color: #3689e6;
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: 500;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-descargar-final:hover {
+    background-color: #2a72c4;
+}
+
+/* === REGLAS MEJORADAS PARA PRENSA-CITAS === */
+
+.prensa-citas {
+    display: grid;
+    /* 1. Por defecto 1 columna (móvil) */
+    grid-template-columns: 1fr;
+    gap: 50px 30px; 
+    max-width: 1200px;
+    margin: 80px auto 0 auto;
+}
+
+/* 2. A 500px (tablets) pasamos a 2 columnas */
+@media (min-width: 500px) {
+    .prensa-citas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 3. A 1024px (desktop) pasamos a 5 columnas */
+@media (min-width: 1024px) {
+    .prensa-citas {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.cita-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-link {
+    display: block; /* Para que el enlace ocupe su propio espacio */
+    margin-bottom: 20px;
+    height: 50px; /* Asegura un alto fijo para el logo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prensa-logo {
+    height: 50px; /* Altura fija para los logos */
+    width: auto;
+    filter: grayscale(100%); /* Logos en escala de grises por defecto */
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.logo-link:hover .prensa-logo {
+    filter: grayscale(0%) brightness(120%) saturate(150%); /* Colorido y más brillante al pasar el mouse */
+    transform: scale(1.05);
+}
+
+.cita-item p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555555;
+    max-width: 300px; /* Limita el ancho del texto de la cita */
+    margin: 0 auto;
+}
+
+
+/* === FOOTER FINAL === */
+.footer-final {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-top: 1px solid #e0e0e0; /* Línea separadora */
+    font-size: 0.9em;
+    color: #777777;
+}
+
+.footer-contenido {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    justify-content: space-between; /* Espacio entre los grupos */
+    align-items: center;
+    gap: 15px 30px; /* Espacio entre los elementos cuando se envuelven */
+}
+
+.footer-final .copyright {
+    order: 1; /* Asegura que el copyright vaya primero en el orden flex */
+}
+
+.footer-final .idioma {
+    order: 2; /* Idioma segundo */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-final .idioma i {
+    color: #999999;
+}
+
+.footer-nav {
+    order: 3; /* Navegación al final */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px; /* Espacio entre los enlaces */
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #777777;
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: #3689e6;
+}
+
+/* === ESTILOS PARA EL MENÚ RESPONSIVO === */
+
+.menu-toggle {
+    display: none; /* Oculto en desktop */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #010101;
+    cursor: pointer;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+/* Usaremos 900px como punto de quiebre */
+@media (max-width: 900px) {
+    .header {
+        /* Asegura que el logo y el botón queden en los extremos */
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: block; /* Muestra el botón de hamburguesa */
+    }
+
+    .menu-container {
+        display: none; /* Oculta el menú por defecto */
+        position: absolute;
+        top: 60px; /* Altura aproximada de tu header */
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        
+        /* Estilos para el contenedor vertical */
+        flex-direction: column;
+        align-items: flex-start; /* Alinea los items a la izquierda */
+        padding: 10px 0;
+        z-index: 100;
+    }
+
+    .menu-container.open {
+        display: flex; /* Muestra el menú al hacer clic */
+    }
+
+    /* ESTA ES LA REGLA CORREGIDA */
+    .navegacion {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    }
+
+    .navegacion a {
+        padding: 15px 30px; /* Más espacio para tocar */
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .redes {
+        margin: 0;
+        padding: 20px 30px;
+    }
+}
+
+
+/* Ajustes para móviles en el footer */
+@media (max-width: 768px) {
+    .footer-contenido {
+        flex-direction: column; /* Apila los elementos */
+        align-items: center; /* Centra los elementos */
+        text-align: center;
+    }
+    .footer-final .copyright,
+    .footer-final .idioma,
+    .footer-nav {
+        order: unset; /* Reinicia el orden para que sigan el flujo normal */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        justify-content: center; /* Centra los enlaces en la navegación */
+    }
+    .footer-nav {
+        margin-top: 15px; /* Espacio entre la navegación y el idioma */
+    }
 }
