@@ -13,6 +13,151 @@ a{
     text-decoration: none;
 }
 body{
+    .contenido-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 10px;
+    gap: 10px;
+    }
+
+    /** Lineas que son MENU cuando se hace pequeña la pantalla **/
+    .menuline {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        svg {
+            fill: white;
+            transition: fill 0.3s;
+        }
+        :hover svg {
+            fill: #333;
+        }
+    }
+    
+    .encabezado {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        align-items: right;
+        li{
+            width: fit-content;
+        }
+        li:first-child svg {
+            
+            transition: opacity 0.2s;
+                path {
+                    fill: #888888;
+                }
+        }
+        a {
+            background-color: inherit;
+            color: white;
+            font-weight: 350;
+            font-size:16px;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+    
+        a:hover {
+            color:#888888;
+        }
+    
+    }
+
+
+
+
+    /** Redes sociales **/
+
+    .encabezado-redes{
+
+        display: flex;
+        gap: 0.8rem;
+        list-style: none;
+        align-items: right;
+        width: fit-content;
+        a {
+            width: 36px;
+            height: 36px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            display: flex;
+            align-items: right;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            :hover {
+                background-color: #e0e0e0;
+                transform: translateY(-2px);
+            }
+        }
+        li{
+            display: inline-block;
+            position: relative;
+            .youtube{
+                svg path{
+                    fill: white;
+                }
+                :hover svg path{
+                    fill: #FF0000;
+
+                }
+            }
+            .mastodon{
+                svg path {
+                    fill: white;
+                }
+                :hover svg path {
+                    fill: #55abf1;
+                }
+            }
+
+            .discord {
+                svg path {
+                    fill: white;
+                }
+                :hover svg path {
+                    fill: #7f88e7;
+                }
+            }
+    }
+    
+    
+        li::after {
+            content: attr(data-name);
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            color: white;
+            padding: 3px 3px;
+            border: 1px solid #333;
+            border-radius: 1px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+            z-index: 10000;
+        }
+
+        li:hover::after {
+            opacity: 1;
+        }
+    }
+
+
+
+
+    
+
+
+ 
     > header {
         padding: 0px;
         background-color: #64baff;
